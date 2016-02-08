@@ -1,7 +1,6 @@
 # hello-lambda
 Introduction to using AWS Lambda Functions
 
-## Related blog post
 At Trail we've been using [Pentaho's open source data integration (Kettle) app]
 (http://community.pentaho.com/projects/data-integration/) to design ETL jobs that are used to provide our partner
 integrations. As we integrate with more partners we've found some of the more complex integrations harder to achieve. 
@@ -18,7 +17,7 @@ care of provisioning and managing the servers that you use to run the code.*
 Using Amazon Lambda we we're able to write our more complex ETL jobs in Node - allowing us to leverage unit testing 
 frameworks to validate our integrations and modern debugging tools to assist our workflow. 
 
-### Lambda as and ETL runner
+### Lambda as an ETL runner
 We actually reviewed AWS Lambda as an ETL job running platform in the middle of 2015 but the lack of a simple 
 scheduler stopped us moving ahead. In Nov 2015 Amazon introduced CloudWatch events - time based triggers which you can
 route to several AWS services including Lambda functions. Using CloudWatch events we're able to configure ETL jobs and
