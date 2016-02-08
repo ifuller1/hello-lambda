@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "Hello $1"
+
+cd ./dist/
+
+zip -r $1.zip ./$1.js
+
+aws lambda update-function-code --function-name "$1" --zip-file fileb://$1.zip
+aws lambda get-function --function-name "$1"
+aws lambda invoke --function-name "$1" --payload "{}" output.log
+
+if grep -q error output.log; then
+        echo "There were errors deploying and running $1 :("
+        cat output.log
+        exit 1
+else
+        echo "$1 deployed!"
+fi
