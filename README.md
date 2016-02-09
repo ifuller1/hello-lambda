@@ -1,5 +1,5 @@
 # hello-lambda
-Introduction to using AWS Lambda Functions
+Introduction to AWS Lambda Functions
 
 At Trail we've been using [Pentaho's open source data integration (Kettle) app]
 (http://community.pentaho.com/projects/data-integration/) to design ETL jobs that are used to provide our partner
