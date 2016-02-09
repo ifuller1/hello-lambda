@@ -141,7 +141,7 @@ AWS_DEFAULT_REGION
 AWS_SECRET_ACCESS_KEY
 ```
 
-We then use the following *Setup Commands*
+We then use the following **Setup Commands**
 ```
 pip install awscli
 nvm install 4.2.4
@@ -149,7 +149,7 @@ npm install
 npm run-script build
 ```
 
-along with a *Test Pipeline* consisting of
+along with a **Test Pipeline** consisting of
 ```
 npm test
 ```
