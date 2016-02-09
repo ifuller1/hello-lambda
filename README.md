@@ -180,7 +180,9 @@ else
 fi
 ```
 
+### A Note on performance
+When we initially deployed our ETL jobs we noticed that network requests were failing, or even worse that the whole job was timing out within Lambdas five minute limit. After some research we realised that the memory configuration for our Lambda jobs (defaulted to 128MB) was directly tied to the CPU performance of the Lambda environment. Additionally, with out ETL schedules being set to twenty or more minutes, the Lambda environment was running from cold. Increasing the memory allocation on our Lambda functions also increased the performance, removing any of these issues - and the prices is still a fraction of our existing setup. 
+
 ### Reference
 Feel free to take a look at our reference project https://github.com/trailsuite/hello-lambda. We've been impressed
-with how easy Lambda was to work with and how it might improve our pipeline. If you'd like to work with technologies
-like this, please get in touch via our blog or email us directly.
+with how easy Lambda was to work with and how it might improve our pipeline. If you're interesting in working with technologies like this to solve difficult problems, then get in touch.
