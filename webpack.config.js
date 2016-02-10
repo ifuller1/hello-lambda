@@ -22,7 +22,7 @@ function createEntryPoints()
 }
 
 module.exports = {
-  entry:createEntryPoints(),
+  entry: createEntryPoints(),
   output: {
     path: path.join(__dirname, "dist"),
     library: "[name]",
